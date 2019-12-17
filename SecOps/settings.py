@@ -24,7 +24,7 @@ SECRET_KEY = 'zxlrz++ontk$j%%f412u&wa(5yk(g%$8tybit@qg!(53(41+l+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-ALLOWED_HOSTS = ['localhost', 'https://secops-api.herokuapp.com/', '127.0.0.1', 'herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'secops-api.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
