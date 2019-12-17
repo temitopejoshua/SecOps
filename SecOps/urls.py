@@ -21,7 +21,8 @@ from django.conf.urls import url
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include("operations.urls")),
-    url(r'^', include('drf_autodocs.urls')),
 
     url(r"^rest-auth/registration/", include("rest_auth.registration.urls")),
+    url(r'^', include('drf_autodocs.urls')),
+
 ]

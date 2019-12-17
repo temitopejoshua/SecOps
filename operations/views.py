@@ -57,3 +57,4 @@ class UserList(generics.ListAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
     name = "user-list"
+
