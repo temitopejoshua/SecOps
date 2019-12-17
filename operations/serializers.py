@@ -5,18 +5,7 @@ from . import models
 class NativesSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Natives
-        fields = (
-            'url',
-            'first_name',
-            'last_name',
-            'native_id',
-            'email',
-            'phone_number',
-            'image_1',
-            'image_2',
-            'image_3',
-            'image_4',
-            'date_created',)
+        fields = ('_all__',)
 
 
 class CitizenSerializers(serializers.HyperlinkedModelSerializer):
