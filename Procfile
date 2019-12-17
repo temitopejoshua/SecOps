@@ -1,1 +1,1 @@
-web: gunicorn [App neme].wsgi
+web: gunicorn SecOps.wsgi
