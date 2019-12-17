@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^citizens/$', views.CitizensList.as_view(), name=views.CitizensList.name),
     url(r"^citizens/(?P<pk>[0-9]+)$", views.CitizensDetail.as_view(), name=views.CitizensDetail.name),
-    url(r"^activities/$", views.ActivitiesList.as_view(), name=views.ActivitiesList.name),
+    url(r"$", views.ActivitiesList.as_view(), name=views.ActivitiesList.name),
     url(r"^activities/(?P<pk>[0-9]+)$", views.ActivitiesDetails.as_view(), name=views.ActivitiesDetails.name),
 
     # User registration Details
