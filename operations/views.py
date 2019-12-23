@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from .models import Elders, Natives, Citizens, Activities, CustomUser
+from rest_framework.response import Response
+from rest_framework.reverse import reverse
+
 import operations.serializers as ss
 from rest_framework import generics
 import operations.models as om
@@ -59,3 +60,17 @@ class UserList(generics.ListAPIView):
     serializer_class = ss.UserSerializer
     name = "user-list"
 
+
+class ApiRoot(generics.ListAPIView):
+    name = 'Welcome to SecOps-API'
+
+    def get(self, request, *args, **kwargs):
+        return Response({
+            'elder-list': reverse(EldersList.name, request=request),
+            'natives-list': reverse(NativesList.name, request=request),
+            'activities-list': reverse(ActivitiesList.name, request=request),
+            'citizen-list': reverse(CitizensList.name, request=request),
+            'api-documentation-local': 'http://127.0.0.1:8000/redoc/',
+            'api-documentation-online': 'http://secops-api.herokuapp.com/redoc/'
+
+        })

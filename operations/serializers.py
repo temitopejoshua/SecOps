@@ -5,7 +5,7 @@ from . import models
 class NativesSerializers(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Natives
-        fields = ('_all__',)
+        fields = '__all__'
 
 
 class CitizenSerializers(serializers.HyperlinkedModelSerializer):

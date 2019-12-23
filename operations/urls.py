@@ -11,8 +11,9 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('citizens/', views.CitizensList.as_view(), name=views.CitizensList.name),
     path("citizens/<int:pk>", views.CitizensDetail.as_view(), name=views.CitizensDetail.name),
-    path("", views.ActivitiesList.as_view(), name=views.ActivitiesList.name),
+    path("activities/", views.ActivitiesList.as_view(), name=views.ActivitiesList.name),
     path("activities/<int:pk>", views.ActivitiesDetails.as_view(), name=views.ActivitiesDetails.name),
+    path("", views.ApiRoot.as_view(), name = views.ApiRoot.name),
 
     # User registration Details
     path("users/", views.UserList.as_view(), name=views.UserList.name),

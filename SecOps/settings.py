@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth.registration',
     'operations',
+    'drf_yasg'
 
 ]
 
