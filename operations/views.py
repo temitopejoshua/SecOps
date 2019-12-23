@@ -71,6 +71,6 @@ class ApiRoot(generics.ListAPIView):
             'activities-list': reverse(ActivitiesList.name, request=request),
             'citizen-list': reverse(CitizensList.name, request=request),
             'api-documentation-local': 'http://127.0.0.1:8000/redoc/',
-            'api-documentation-online': 'http://secops-api.herokuapp.com/redoc/'
+            'api-documentation-online': 'https://secops-api.herokuapp.com/redoc/'
 
         })
